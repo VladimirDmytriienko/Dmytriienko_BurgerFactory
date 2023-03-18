@@ -1,0 +1,413 @@
+@import zero.sass
+
+h3
+	font: normal normal bold 24px/35px Poppins
+	letter-spacing: 0px
+	color: #2A2A2A
+h2
+	font: normal normal 900 64px/95px Poppins
+	letter-spacing: 0px
+	color: #2A2A2A
+.container
+	max-width: 1382px
+	position: relative
+	width: 100%
+	margin: 0 auto
+	padding: 0 15px
+.text
+	font: normal normal normal 18px/27px Poppins
+	letter-spacing: 0px
+	color: #2A2A2A
+
+.header
+	box-shadow: 0 5px 5px -5px #333
+	&__wrp
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		align-items: center
+		padding: 1rem
+		background-color: #fff
+		color: #333
+		max-height: 125px
+		padding: 29px 0
+
+	&__logo
+		flex: 0 0 auto
+		margin-right: 100px
+		&-link
+			display: inline-block
+			text-decoration: none
+			& img
+				min-height: 67px
+				max-width: 208px
+	&__menu
+		flex: 1 1 auto
+		&-list
+			display: flex
+			gap: 70px
+		&-link
+			font: normal normal bold 18px/27px Poppins
+			letter-spacing: 0px
+			color: #2A2A2A
+			text-transform: uppercase
+			opacity: 1
+	&__button
+		padding: 0px 32px
+		max-width: 161px
+		min-height: 40px
+		background-color: #0098F7
+		border-radius: 10px
+		text-align: center
+		display: flex
+		align-items: center
+		&-link
+			color: #2A2A2A
+			font: normal normal bold 18px/27px Poppins
+			letter-spacing: 0px
+
+.navbar
+	display: none !important
+	min-height: 70px
+	display: flex
+	justify-content: space-between
+	align-items: center
+.nav-menu
+	display: flex
+	justify-content: space-between
+	align-items: center
+	gap: 60px
+
+.nav-link
+	transition: 0.3s ease-out
+	&:hover
+		color: #FFFFFF
+.hamburger
+	display: none
+	cursor: pointer
+
+.bar
+	display: block
+	width: 25px
+	height: 3px
+	margin: 5px auto
+	-webkit-transition: all 0.3s ease
+	transition: all 0.3s ease
+	background-color: #F6E224
+
+.main
+	background: url(../img/blue_bg.svg) 0 0/100% auto no-repeat
+	min-height: 100%
+
+	position: relative
+	&__start
+		display: flex
+		justify-content: space-between
+		padding: 49px 0 0 0
+		margin: 0 0 150px 0
+
+		&-wrp
+			padding: 93px 0 0 0
+			display: flex
+			flex-direction: column
+			gap: 20px
+			h1
+				max-height: auto
+				font: normal normal 900 84px/125px Poppins
+				letter-spacing: 0px
+				color: #2A2A2A
+			h3
+				font: normal normal bold 24px/35px Poppins
+				letter-spacing: 0px
+				color: #2A2A2A
+		&-button
+			padding: 10px
+			max-width: 270px
+			min-height: 40px
+			background-color: #F6E224
+			border-radius: 10px
+			text-align: center
+			font: normal normal bold 18px/27px Poppins
+			letter-spacing: 0px
+		&-burger
+			max-width: 625px
+			align-items: center
+
+.ingredients
+	display: flex
+	flex-direction: column
+	align-items: center
+	h2
+		margin-bottom: 20px
+	h3
+		max-width: 690px
+		text-align: center
+	&__cards
+		margin: 50px 0
+		display: flex
+		padding: 20px 0
+		box-shadow: transparent linear-gradient(270deg, #FFFFFF 0%, #FFFFFF00 100%) 0% 0% no-repeat padding-box, linear-gradient(to right,#ccc , transparent 20%)
+		&-product
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			align-items: center
+			box-shadow: 0px 3px 6px #00000029
+			border-radius: 26px
+			padding: 20px 0 20px 0
+			min-width: 229px
+			min-height: 242px
+			margin: 0 26px
+			span
+				text-align: center
+				font: normal normal bold 18px/27px Poppins
+				letter-spacing: 0px
+				color: #2A2A2A
+	&__text
+		max-width: 894px
+		text-align: center
+
+.swiper
+	padding: 50px 0
+	width: 100%
+	height: 100%
+	z-index: 5
+	position: relative
+	&-slide
+		text-align: center
+		font-size: 18px
+		background: #fff
+		display: flex
+		justify-content: space-between
+		align-items: center
+		flex-direction: column
+		padding: 20px 10px
+		max-width: 230px
+		height: 242px
+		background: #FFFFFF 0% 0% no-repeat padding-box
+		box-shadow: 0px 3px 6px #00000029
+		border-radius: 26px
+	&-slide img
+		display: block
+		max-width: 100%
+		height: auto
+		object-fit: cover
+	&-slide span
+		bottom: 0
+		font: normal normal bold 18px/27px Poppins
+		letter-spacing: 0px
+		color: #2A2A2A
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		right: 0px
+		width: 14%
+		bottom: 0px
+		background: transparent linear-gradient(270deg, #FFFFFF 0%, #FFFFFF00 100%) 0% 0% no-repeat padding-box
+		pointer-events: none
+		z-index: 1
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0px
+		width: 14%
+		bottom: 0px
+		background: transparent linear-gradient(90deg, #FFFFFF 0%, #FFFFFF00 100%) 0% 0% no-repeat padding-box
+		pointer-events: none
+		z-index: 2
+.story__wrp
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	margin: 150px 0 150px 0
+	&-text
+		max-width: 668px
+		h3
+			margin: 18px 0 45px 0
+	&-photo
+		max-width: 635px
+		img
+			width: 100%
+
+.burgers
+	text-align: center
+	&__wrp
+		display: flex
+		gap: 0 16px
+		justify-content: space-between
+		margin: 50px 0
+		max-height: 408px
+		h3
+			text-align: center
+		&-card
+			display: flex
+			flex-direction: column
+			padding: 20px
+
+			height: 100%
+			width: 100%
+			box-shadow: 0px 3px 6px #00000029
+			border-radius: 26px
+			div
+				margin: 61px 0 42px 0
+			a
+				align-self: end
+				bottom: 0
+				color: #00B3FA
+				font: normal normal bold 18px/27px Poppins
+
+	&__button
+		display: block
+		margin: 0 auto
+		padding: 10px
+		max-width: 161px
+		max-height: 40px
+		background-color: #0098F7
+		border-radius: 10px
+		text-align: center
+		&-link
+			color: #2A2A2A
+			font: normal normal bold 18px/27px Poppins
+			letter-spacing: 0px
+
+.location
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	margin: 150px auto
+	max-width: 860px
+
+	&__text
+		padding: 30px 12px
+		display: flex
+		justify-content: space-between
+		width: 100%
+		a
+			font: normal normal normal 24px/35px Poppins
+			letter-spacing: 0px
+			color: #2A2A2A
+	&__map
+		display: flex
+		width: 100%
+		height: 483px
+		iframe
+			width: 100%
+			height: 100%
+
+footer
+	background: #F5F5F5
+.footer
+	display: flex
+	justify-content: space-between
+	align-items: center
+	&__text
+		padding: 15px 0
+		text-align: right
+		display: grid
+		gap: 5px 0
+		h5
+			font: normal normal bold 14px/21px Poppins
+			letter-spacing: 0px
+			color: #2A2A2A
+		a
+			font: normal normal normal 14px/21px Poppins
+			letter-spacing: 0px
+			color: #2A2A2A
+
+/* PC */
+@media (max-width: 1099px)
+	.container
+		max-width: 970px
+	.header
+		box-shadow: 0 5px 5px -5px #333
+		&__wrp
+			justify-content: space-between
+		&__logo
+			margin-right: 0
+		&__menu
+			&-list
+				gap: 20px
+	.main
+		&__start
+			&-burger
+				img
+					max-width: 100%
+	.story__wrp
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		margin: 150px 0 150px 0
+		&-text
+			max-width: 50%
+			h3
+				margin: 18px 0 45px 0
+		&-photo
+			max-width: 50%
+
+/* TABLET */
+@media (max-width: 991.98px)
+	.container
+		max-width: 940px
+	.header__menu
+		flex: 0
+		&-list
+			gap: 12px
+	.header
+		&__button
+			padding: 0 12px
+
+
+
+	.burgers__wrp-card
+		max-width: 250px
+		// max-height: 300px
+		div
+			margin: 20px 0
+		img
+			width: 100%
+		h3
+			height: 75px
+	
+/* MOBILE */
+@media (max-width: 767.98px)
+	.container
+		max-width: none
+	.header__menu
+		display: none
+	.navbar
+		display: block !important
+	.hamburger
+		display: block 
+	.hamburger.active .bar:nth-child(2)
+		opacity: 0
+
+	.hamburger.active .bar:nth-child(1)
+		transform: translateY(8px) rotate(45deg)
+
+	.hamburger.active .bar:nth-child(3)
+		transform: translateY(-8px) rotate(-45deg)
+
+	.nav-menu
+		position: fixed
+		left: -100%
+		top: 70px
+		gap: 0
+		flex-direction: column
+		background-color: #262626
+		width: 100%
+		text-align: center
+		transition: 0.3s
+
+	.nav-item
+		margin: 16px 0
+
+	.nav-menu.active
+		left: 0
+
+/* MOBILE SMALL */
+@media (max-width: 479.98px)
+
+
