@@ -1,4 +1,12 @@
 @import zero.sass
+body
+	box-sizing: border-box
+	border: 1px black
+
+body.active-nav
+	overflow: hidden
+
+
 
 h3
 	font: normal normal bold 24px/35px Poppins
@@ -56,8 +64,8 @@ h2
 		padding: 0px 32px
 		max-width: 161px
 		min-height: 40px
-		background-color: #0098F7
-		border-radius: 10px
+		background-color: #00B3FA
+		border-radius: 9px
 		text-align: center
 		display: flex
 		align-items: center
@@ -93,11 +101,12 @@ h2
 	margin: 5px auto
 	-webkit-transition: all 0.3s ease
 	transition: all 0.3s ease
-	background-color: #F6E224
+	background-color: #00B3FA
 
 .main
-	background: url(../img/blue_bg.svg) 0 0/100% auto no-repeat
+	background: url(../img/bg.svg) 0 0/100% auto no-repeat
 	min-height: 100%
+	
 
 	position: relative
 	&__start
@@ -325,9 +334,12 @@ footer
 		box-shadow: 0 5px 5px -5px #333
 		&__wrp
 			justify-content: space-between
+			
+				
 		&__logo
 			margin-right: 0
 		&__menu
+			flex: 0
 			&-list
 				gap: 20px
 	.main
@@ -359,7 +371,11 @@ footer
 		&__button
 			padding: 0 12px
 
-
+	.main
+		background-size: auto
+		&__start
+			&-wrp
+				padding: 0
 
 	.burgers__wrp-card
 		max-width: 250px
@@ -372,13 +388,35 @@ footer
 			height: 75px
 	
 /* MOBILE */
-@media (max-width: 767.98px)
+
+
+@media (max-width: 768.98px)
 	.container
 		max-width: none
+	h3
+		font: normal normal bold 18px Poppins
+	.main
+		h1
+			font: normal normal 900 50px Poppins 
+	h2
+		font: normal normal 900 40px Poppins
+	.header
+		&__wrp
+			padding: 5px 0
+		&__logo
+			max-width: 150px
+			img
+				min-height: 100%
+				width: 100%
+		&__button
+			min-height: 30px
+			&-link
+				font-size: 15px
+	
 	.header__menu
 		display: none
 	.navbar
-		display: block !important
+		display: flex !important
 	.hamburger
 		display: block 
 	.hamburger.active .bar:nth-child(2)
@@ -393,13 +431,14 @@ footer
 	.nav-menu
 		position: fixed
 		left: -100%
-		top: 70px
+		top: 80px
 		gap: 0
 		flex-direction: column
-		background-color: #262626
+		background-color: #00B3FA
 		width: 100%
 		text-align: center
 		transition: 0.3s
+		z-index: 1
 
 	.nav-item
 		margin: 16px 0
@@ -407,7 +446,54 @@ footer
 	.nav-menu.active
 		left: 0
 
+	.main
+		background-size: auto
+		/* background-size: auto 347px;
+		&__start
+			margin: 0 0 50px 0
+			&-wrp
+				padding: 0
+				max-width: 50%
+
+	.story
+		&__wrp
+			flex-direction: column-reverse
+			margin: 50px 0
+			&-photo
+				max-width: 100%
+			&-text
+				max-width: 100%
+				h3
+					margin: 20px 0
+			
+	.burgers
+		&__wrp
+			margin: 20px 0 25px 0	
+			&-card
+				a
+					align-self: center
+	.location
+		margin: 50px auto
+		&__text
+			padding: 12px 0
+			a
+				font: normal normal normal 15px Poppins
+	.footer
+		&__logo
+			max-width: 150px
+			img
+				min-height: 100%
+				width: 100%
+		&__text
+			padding: 5px 0
+			a
+				font: normal normal normal 10px Poppins
+
+@media (max-width: 640px)
+	
+
 /* MOBILE SMALL */
 @media (max-width: 479.98px)
+	
 
 
