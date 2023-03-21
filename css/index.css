@@ -58,6 +58,7 @@ body {
 
 body.active-nav {
   overflow: hidden;
+  position: fixed;
 }
 
 h3 {
@@ -86,8 +87,15 @@ h2 {
   color: #2A2A2A;
 }
 
+.blue:hover {
+  background-color: #0098F7;
+  color: #0098F7;
+  box-shadow: 0 0 10px rgba(0, 152, 247, 0.5);
+}
+
 .header {
   box-shadow: 0 5px 5px -5px #333;
+  z-index: 1;
 }
 .header__wrp {
   display: flex;
@@ -135,6 +143,7 @@ h2 {
   text-align: center;
   display: flex;
   align-items: center;
+  transition: all 0.3s ease-in-out;
 }
 .header__button-link {
   color: #2A2A2A;
@@ -216,6 +225,10 @@ h2 {
   text-align: center;
   font: normal normal bold 18px/27px Poppins;
   letter-spacing: 0px;
+  transition: all 0.3s ease-in-out;
+}
+.main__start-button:hover {
+  background-color: #EE9C10;
 }
 .main__start-burger {
   max-width: 625px;
@@ -343,6 +356,7 @@ h2 {
   text-align: center;
 }
 .burgers__wrp {
+  position: relative;
   display: flex;
   gap: 0 16px;
   justify-content: space-between;
@@ -353,6 +367,7 @@ h2 {
   text-align: center;
 }
 .burgers__wrp-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -360,6 +375,7 @@ h2 {
   width: 100%;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
   border-radius: 26px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
 }
 .burgers__wrp-card div {
   margin: 61px 0 42px 0;
@@ -369,16 +385,45 @@ h2 {
   bottom: 0;
   color: #00B3FA;
   font: normal normal bold 18px/27px Poppins;
+  cursor: pointer;
+}
+.burgers__wrp-card .ingredients {
+  display: none;
+  margin-top: 20px;
+  top: 100%;
+  left: 0;
+}
+.burgers__wrp-card .ingredients__textBold {
+  font: bold 14px Poppins;
+  align-self: start;
+}
+.burgers__wrp-card .ingredients__text {
+  font: normal 14px Poppins;
+  align-self: start;
+}
+.burgers__wrp-card.active .ingredients {
+  display: flex;
+  margin: 0;
+}
+.burgers__wrp-card.active .ingredients a {
+  bottom: 0;
+  align-self: end;
+}
+.burgers__wrp-card.active a.burger__details-link {
+  display: none;
 }
 .burgers__button {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
   padding: 10px;
   max-width: 161px;
   max-height: 40px;
-  background-color: #0098F7;
+  background-color: #00B3FA;
   border-radius: 10px;
   text-align: center;
+  transition: all 0.3s ease-in-out;
 }
 .burgers__button-link {
   color: #2A2A2A;
@@ -567,11 +612,15 @@ footer {
     top: 80px;
     gap: 0;
     flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
     background-color: #00B3FA;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(33px);
     width: 100%;
     text-align: center;
     transition: 0.3s;
-    z-index: 1;
+    z-index: 10;
   }
   .nav-item {
     margin: 16px 0;
@@ -633,3 +682,20 @@ footer {
   }
 }
 /* MOBILE SMALL */
+@media (max-width: 479.98px) {
+  .burgers__wrp {
+    max-height: none;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .burgers__wrp-card {
+    margin: 10px 0;
+    max-width: 45%;
+  }
+  .ingredients a {
+    align-self: center !important;
+  }
+  .location__map {
+    height: 350px;
+  }
+}

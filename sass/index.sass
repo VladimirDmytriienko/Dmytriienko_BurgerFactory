@@ -5,8 +5,7 @@ body
 
 body.active-nav
 	overflow: hidden
-
-
+	position: fixed
 
 h3
 	font: normal normal bold 24px/35px Poppins
@@ -26,9 +25,13 @@ h2
 	font: normal normal normal 18px/27px Poppins
 	letter-spacing: 0px
 	color: #2A2A2A
-
+.blue:hover
+	background-color: #0098F7
+	color: #0098F7
+	box-shadow: 0 0 10px rgba(0, 152, 247, 0.5)
 .header
 	box-shadow: 0 5px 5px -5px #333
+	z-index: 1
 	&__wrp
 		display: flex
 		flex-wrap: wrap
@@ -69,10 +72,13 @@ h2
 		text-align: center
 		display: flex
 		align-items: center
+		transition: all 0.3s ease-in-out
 		&-link
 			color: #2A2A2A
 			font: normal normal bold 18px/27px Poppins
 			letter-spacing: 0px
+	
+		
 
 .navbar
 	display: none !important
@@ -106,7 +112,6 @@ h2
 .main
 	background: url(../img/bg.svg) 0 0/100% auto no-repeat
 	min-height: 100%
-	
 
 	position: relative
 	&__start
@@ -114,7 +119,7 @@ h2
 		justify-content: space-between
 		padding: 49px 0 0 0
 		margin: 0 0 150px 0
-
+	
 		&-wrp
 			padding: 93px 0 0 0
 			display: flex
@@ -138,6 +143,10 @@ h2
 			text-align: center
 			font: normal normal bold 18px/27px Poppins
 			letter-spacing: 0px
+			transition: all 0.3s ease-in-out
+		&-button:hover
+			background-color: #EE9C10
+
 		&-burger
 			max-width: 625px
 			align-items: center
@@ -243,22 +252,25 @@ h2
 .burgers
 	text-align: center
 	&__wrp
+		position: relative
 		display: flex
 		gap: 0 16px
 		justify-content: space-between
 		margin: 50px 0
 		max-height: 408px
+
 		h3
 			text-align: center
 		&-card
+			position: relative
 			display: flex
 			flex-direction: column
 			padding: 20px
-
 			height: 100%
 			width: 100%
 			box-shadow: 0px 3px 6px #00000029
 			border-radius: 26px
+			background: #FFFFFF 0% 0% no-repeat padding-box
 			div
 				margin: 61px 0 42px 0
 			a
@@ -266,20 +278,49 @@ h2
 				bottom: 0
 				color: #00B3FA
 				font: normal normal bold 18px/27px Poppins
+				cursor: pointer
+			.ingredients
+				display: none
+				margin-top: 20px
 
+				top: 100%
+				left: 0
+				&__textBold
+					font: bold 14px Poppins
+					align-self: start
+				&__text
+					font: normal 14px Poppins
+					align-self: start
+
+			&.active .ingredients
+				display: flex
+				margin: 0
+			&.active .ingredients a
+				bottom: 0
+				align-self: end
+			&.active
+				a.burger__details-link
+					display: none
 	&__button
-		display: block
+		display: flex
+		align-items: center
+		justify-content: center
 		margin: 0 auto
 		padding: 10px
 		max-width: 161px
 		max-height: 40px
-		background-color: #0098F7
+		background-color: #00B3FA
 		border-radius: 10px
 		text-align: center
+		transition: all 0.3s ease-in-out
 		&-link
 			color: #2A2A2A
 			font: normal normal bold 18px/27px Poppins
 			letter-spacing: 0px
+
+
+
+
 
 .location
 	display: flex
@@ -334,8 +375,7 @@ footer
 		box-shadow: 0 5px 5px -5px #333
 		&__wrp
 			justify-content: space-between
-			
-				
+
 		&__logo
 			margin-right: 0
 		&__menu
@@ -386,9 +426,8 @@ footer
 			width: 100%
 		h3
 			height: 75px
-	
-/* MOBILE */
 
+/* MOBILE */
 
 @media (max-width: 768.98px)
 	.container
@@ -397,7 +436,7 @@ footer
 		font: normal normal bold 18px Poppins
 	.main
 		h1
-			font: normal normal 900 50px Poppins 
+			font: normal normal 900 50px Poppins
 	h2
 		font: normal normal 900 40px Poppins
 	.header
@@ -412,13 +451,13 @@ footer
 			min-height: 30px
 			&-link
 				font-size: 15px
-	
+
 	.header__menu
 		display: none
 	.navbar
 		display: flex !important
 	.hamburger
-		display: block 
+		display: block
 	.hamburger.active .bar:nth-child(2)
 		opacity: 0
 
@@ -434,11 +473,15 @@ footer
 		top: 80px
 		gap: 0
 		flex-direction: column
+		justify-content: flex-start
+		height: 100vh
 		background-color: #00B3FA
+		background: rgba(255, 255, 255, 0.1)
+		backdrop-filter: blur(33px)
 		width: 100%
 		text-align: center
 		transition: 0.3s
-		z-index: 1
+		z-index: 10
 
 	.nav-item
 		margin: 16px 0
@@ -465,15 +508,16 @@ footer
 				max-width: 100%
 				h3
 					margin: 20px 0
-			
+
 	.burgers
 		&__wrp
-			margin: 20px 0 25px 0	
+			margin: 20px 0 25px 0
 			&-card
 				a
 					align-self: center
 	.location
 		margin: 50px auto
+
 		&__text
 			padding: 12px 0
 			a
@@ -490,10 +534,25 @@ footer
 				font: normal normal normal 10px Poppins
 
 @media (max-width: 640px)
-	
 
 /* MOBILE SMALL */
 @media (max-width: 479.98px)
-	
+	.main
+		// background: #fff
+		&__start
+			// background: linear-gradient(to right, #00e4fe, #008bf6)
 
-
+	.burgers
+		&__wrp
+			max-height: none
+			justify-content: space-around
+			flex-wrap: wrap
+			&-card
+				margin: 10px 0
+				max-width: 45%
+	.ingredients
+		a
+			align-self: center !important
+	.location
+		&__map
+			height: 350px
