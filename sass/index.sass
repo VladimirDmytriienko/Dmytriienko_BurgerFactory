@@ -189,7 +189,7 @@ h2
 	padding: 50px 0
 	width: 100%
 	height: 100%
-	z-index: 5
+	z-index: -109
 	position: relative
 	&-slide
 		text-align: center
@@ -343,9 +343,7 @@ h2
 		display: flex
 		width: 100%
 		height: 483px
-		iframe
-			width: 100%
-			height: 100%
+		border-radius: 30px
 
 footer
 	background: #F5F5F5
@@ -434,7 +432,9 @@ footer
 		max-width: none
 	h3
 		font: normal normal bold 18px Poppins
-	.main
+	.main	
+		&__start-burger
+			display: flex
 		h1
 			font: normal normal 900 50px Poppins
 	h2

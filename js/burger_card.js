@@ -2,14 +2,22 @@ const cards = document.querySelectorAll('.burgers__wrp-card');
 
 cards.forEach(card => {
   const detailsButton = card.querySelector('a.burger__details-link');
-  const reduceButton = card.querySelector('.burger__details-close');
+  const closeButton = card.querySelector('.burger__details-close');
   const ingredients = card.querySelector('.ingredients');
 
-  detailsButton.addEventListener('click', () => {
-    card.classList.add('active');
+  const toggleIngredients = () => {
+    card.classList.toggle('active');
+  };
+
+  detailsButton.addEventListener('click', (event) => {
+    toggleIngredients();
+    event.stopPropagation();
   });
 
-  reduceButton.addEventListener('click', () => {
-    card.classList.remove('active');
+  closeButton.addEventListener('click', (event) => {
+    toggleIngredients();
+    event.stopPropagation();
   });
+
+  card.addEventListener('click', toggleIngredients);
 });
