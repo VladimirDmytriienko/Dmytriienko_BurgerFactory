@@ -38,16 +38,16 @@
         <nav class="header__menu">
           <ul class="header__menu-list">
             <li class="header__menu-item">
-              <a class="header__menu-link" href="#">INGREDIENT</a>
+              <a class="header__menu-link" href="#section1">INGREDIENT</a>
             </li>
             <li class="header__menu-item">
-              <a class="header__menu-link" href="#">STORY</a>
+              <a class="header__menu-link" href="#section2">STORY</a>
             </li>
             <li class="header__menu-item">
-              <a class="header__menu-link" href="#">BURGERS</a>
+              <a class="header__menu-link" href="#section3">BURGERS</a>
             </li>
             <li class="header__menu-item">
-              <a class="header__menu-link" href="#">LOCATION</a>
+              <a class="header__menu-link" href="#section4">LOCATION</a>
             </li>
           </ul>
         </nav>
@@ -58,16 +58,16 @@
         <nav class="navbar modal-open">
           <ul class="nav-menu">
              <li class="nav-item">
-                <a href="#" class="nav-link header__button-link">INGREDIENT</a>
+                <a href="#section1"  class="nav-link header__button-link" >INGREDIENT</a>
              </li>
              <li class="nav-item">
-                <a href="#" class="nav-link header__button-link">STORY</a>
+                <a href="#section2" class="nav-link header__button-link">STORY</a>
              </li>
              <li class="nav-item">
-                <a href="#" class="nav-link header__button-link">BURGERS</a>
+                <a href="#section3" class="nav-link header__button-link">BURGERS</a>
              </li>
              <li class="nav-item">
-              <a href="#" class="nav-link header__button-link">LOCATION</a>
+              <a href="#section4" class="nav-link header__button-link">LOCATION</a>
            </li>
           </ul>
           <div class="hamburger">
@@ -96,7 +96,7 @@
           <img src="./img/bigBurger_min.png" alt="big burger">
         </div>
       </div>
-      <section class="ingredients">
+      <section id="section1"  class="ingredients" >
         <h2>Ingredients</h2>
         <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mollis id arcu vel maximus.</h3>
         <div class="swiper mySwiper">
@@ -155,7 +155,7 @@
       </section>
 
 
-      <section class="story ">
+      <section id="section2" class="story ">
         <div class="story__wrp">
           <div class="story__wrp-text">
             <h2>The story</h2>
@@ -171,12 +171,12 @@
         </div>
       </section>
 
-      <section class="burgers">
+      <section id="section3" class="burgers">
         <h2>Burgers</h2>
         <div class="burgers__wrp">
           <div class="burgers__wrp-card">
             <h3>1/4 Pound Cheese</h3>
-            <div><img src="./img/products/burger.png" alt=""></div>
+            <div><img src="./img/products/burger.png" alt="burger_photo"></div>
             <a  class="burger__details-link " data-target=".burger-1">Details</a>
               <div class="ingredients burger-1">
                 <p class="ingredients__textBold">Ingredients: </p>
@@ -188,7 +188,7 @@
           </div>
           <div class="burgers__wrp-card">
             <h3>Big Burger</h3>
-            <div><img src="./img/products/burger.png" alt=""></div>
+            <div><img src="./img/products/burger.png" alt="burger_photo"></div>
             <a  class="burger__details-link" data-target=".burger-1">Details</a>
               <div class="ingredients burger-1">
                 <p class="ingredients__textBold">Ingredients: </p>
@@ -200,7 +200,7 @@
           </div>
           <div class="burgers__wrp-card">
             <h3>Pure Bacon</h3>
-            <div><img src="./img/products/burger.png" alt=""></div>
+            <div><img src="./img/products/burger.png" alt="burger_photo"></div>
             <a  class="burger__details-link" data-target=".burger-1">Details</a>
               <div class="ingredients burger-1">
                 <p class="ingredients__textBold">Ingredients: </p>
@@ -216,23 +216,20 @@
         </div>
       </section>
 
-      <section class="location">
+      <section id="section4" class="location">
         <h2>Location</h2>
         <div class="location__text">
           <div><h3>Burger Factory</h3></div>
-          <div><a href="">Pl. de la Riponne 10</a></div>
-          <div><a href="">1005 Lausanne</a></div>
-          <div><a href="">021 800 00 00</a></div>
+          <div><a href="https://goo.gl/maps/Dk7TJgVeTNMUvNyaA">Pl. de la Riponne 10</a></div>
+          <div><a href="https://goo.gl/maps/Dk7TJgVeTNMUvNyaA">1005 Lausanne</a></div>
+          <div><a href="tel:0218000000">021 800 00 00</a></div>
           
           
           
           
         </div>
-        <div class="location__map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2745.18960867942!2d6.6330401!3d46.524149699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c2e31ad9a7581%3A0x6910a4219da53f6!2zUGwuIGRlIGxhIFJpcG9ubmUgMTAsIDEwMDUgTGF1c2FubmUsINCo0LLQtdC50YbQsNGA0LjRjw!5e0!3m2!1sru!2sua!4v1679068129442!5m2!1sru!2sua"
-            style="border-radius: 30px" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+        <div class="location__map" id="map">
+          
         </div>
       </section>
 
@@ -250,20 +247,20 @@
         <div class="footer__logo"><a href=""><img src="./icons/logo-min.png" alt="logo footer"></a></div>
         <div class="footer__text">
           <h5>Burger Factory</h5>
-          <a href="">Pl. de la Riponne 10</a>
-          <a href="">1005 Lausanne</a>
-          <a href="">021 800 00 00</a>
+          <a href="https://goo.gl/maps/Dk7TJgVeTNMUvNyaA">Pl. de la Riponne 10</a>
+          <a href="https://goo.gl/maps/Dk7TJgVeTNMUvNyaA">1005 Lausanne</a>
+          <a href="tel:0218000000">021 800 00 00</a>
 
         </div>
       </div>
     </div>
   </footer>
 
+
+
   <script src="./js/script.js"></script>
   <script src="./js/burger_card.js"></script>
   
-
-
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
@@ -305,6 +302,11 @@
       }
     });
   </script>
+
+  <script src="./js/location.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJKTjPjGVtv0JYYansLvbXK9aZ6BqT8yM&callback=initMap">
+    </script>
 </body>
 
 </html>
