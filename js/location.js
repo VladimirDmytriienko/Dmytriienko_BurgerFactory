@@ -14,4 +14,6 @@ function initMap() {
     
 }
 
-map.getDiv().style.borderRadius = '30px'
+var divElement = document.getElementById("map");
+
+divElement.style.borderRadius = "30px";
