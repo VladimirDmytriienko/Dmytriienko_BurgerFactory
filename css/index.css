@@ -700,5 +700,6 @@ footer {
   }
   .location__map {
     height: 350px;
+    -webkit-border-radius: 30px;
   }
 }
