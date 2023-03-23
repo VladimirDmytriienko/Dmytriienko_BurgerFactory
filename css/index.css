@@ -703,3 +703,7 @@ footer {
     -webkit-border-radius: 30px;
   }
 }
+#map {
+  -webkit-border-radius: 30px !important;
+  border-radius: 30px !important;
+}
