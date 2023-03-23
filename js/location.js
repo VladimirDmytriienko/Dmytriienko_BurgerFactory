@@ -13,3 +13,5 @@ function initMap() {
     });
     
 }
+
+map.getDiv().style.borderRadius = '30px'
