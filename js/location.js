@@ -1,5 +1,9 @@
 function initMap() {
 
+  // Получаем div с классом "gm-style" и задаем ему border-radius
+
+
+
     var location = {lat: 46.524297339046726, lng: 6.633018642329806}; // Координаты маркера
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 17, // Масштаб карты
@@ -11,9 +15,11 @@ function initMap() {
       title: 'Маркер',
       icon: './icons/burger_location.png'
     });
-    
+    var gmStyleDiv = document.getElementsByClassName('gm-style')[0];
+gmStyleDiv.style.borderRadius = '30px';
 }
 
 var divElement = document.getElementById("map");
 
 divElement.style.borderRadius = "30px";
+
