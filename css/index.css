@@ -94,7 +94,6 @@ h2 {
 }
 
 .header {
-  position: fixed;
   width: 100%;
   background-color: #FFFFFF;
   box-shadow: 0 5px 5px -5px #333;
@@ -192,7 +191,6 @@ h2 {
 }
 
 .main {
-  margin-top: 125px;
   background: url(../img/bg.svg) 0 0/100% auto no-repeat;
   min-height: 100%;
   position: relative;
@@ -488,6 +486,12 @@ footer {
   color: #2A2A2A;
 }
 
+.gm-err-content {
+  -webkit-border-radius: 30px !important;
+  -moz-border-radius: 30px !important;
+  border-radius: 30px !important;
+}
+
 /* PC */
 @media (max-width: 1099px) {
   .container {
@@ -542,7 +546,6 @@ footer {
     padding: 0 12px;
   }
   .main {
-    margin-top: 80px;
     background-size: auto;
   }
   .main__start-wrp {
