@@ -94,6 +94,9 @@ h2 {
 }
 
 .header {
+  position: fixed;
+  width: 100%;
+  background-color: #FFFFFF;
   box-shadow: 0 5px 5px -5px #333;
   z-index: 1;
 }
@@ -189,6 +192,7 @@ h2 {
 }
 
 .main {
+  margin-top: 125px;
   background: url(../img/bg.svg) 0 0/100% auto no-repeat;
   min-height: 100%;
   position: relative;
@@ -361,7 +365,6 @@ h2 {
   gap: 0 16px;
   justify-content: space-between;
   margin: 50px 0;
-  max-height: 408px;
 }
 .burgers__wrp h3 {
   text-align: center;
@@ -454,6 +457,9 @@ h2 {
   display: flex;
   width: 100%;
   height: 483px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
 }
 
 footer {
@@ -536,6 +542,7 @@ footer {
     padding: 0 12px;
   }
   .main {
+    margin-top: 80px;
     background-size: auto;
   }
   .main__start-wrp {
@@ -585,7 +592,7 @@ footer {
     min-height: 30px;
   }
   .header__button-link {
-    font-size: 15px;
+    font-size: 16px;
   }
   .header__menu {
     display: none;
@@ -683,6 +690,12 @@ footer {
 }
 /* MOBILE SMALL */
 @media (max-width: 479.98px) {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 32px;
+  }
   .burgers__wrp {
     max-height: none;
     justify-content: space-around;
