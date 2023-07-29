@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "browser-sync": "^2.28.3",
+    "gsap": "^3.12.2",
     "gulp": "^4.0.2",
     "gulp-sass": "^5.1.0",
     "sass": "^1.59.3"

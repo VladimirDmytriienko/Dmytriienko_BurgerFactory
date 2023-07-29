@@ -7,40 +7,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Burger Factory</title>
   <link rel="stylesheet" href="./css/preloader.css">
-  <!-- Favicon for Windows, Linux, Chrome, Firefox, and Internet Explorer -->
-  <link rel="icon" type="image/x-icon" href="/favicon.png" />
 
+  <link rel="icon" type="image/x-icon" href="/favicon.png" />
   <!-- Favicon for iOS -->
   <!-- <link rel="apple-touch-icon" sizes="152x152" href="/favicon.png" /> -->
-
   <!-- Favicon for Android -->
   <!-- <link rel="icon" sizes="192x192" href="/favicon.png" /> -->
-
   <!-- Favicon for Safari and Opera -->
   <!-- <link rel="mask-icon" href="/favicon.png" color="#5bbad5" /> -->
-
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet" />
-
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
   <link rel="stylesheet" href="./css/index.css" />
-
-
-
+  <script type="module" src="./js/animation.js"></script>
+  <script defer src="./js/observer.js"></script>
 </head>
 
 <body>
-
   <div id="preloader">
     <div id="loader"></div>
   </div>
   
-
   <header class="header">
-
     <div class="container">
       <div class="header__wrp">
         <div class="header__logo">
@@ -48,11 +39,6 @@
             <img class="header__logo-image" src="icons/logo-max.png" alt="logo" />
           </a>
         </div>
-
-
-
-
-
 
         <nav class="header__menu">
           <ul class="header__menu-list">
@@ -73,7 +59,6 @@
         <div class="header__button blue">
           <a class="header__button-link" href="#">Order now</a>
         </div>
-
         <nav class="navbar modal-open">
           <ul class="nav-menu">
             <li class="nav-item">
@@ -96,17 +81,15 @@
           </div>
         </nav>
       </div>
-
     </div>
-
   </header>
 
   <main class="main">
     <div class="container">
       <div class="main__start">
         <div class="main__start-wrp">
-          <h1>Burger Factory</h1>
-          <h3>Your dreamed burger close to your locations!</h3>
+          <h1  class="main-title" >Burger Factory</h1>
+          <h3 class="main-title3" >Your dreamed burger close to your locations!</h3>
           <div class="main__start-button">
             <a href="#" class="main__start-link ">Discover the ingredients</a>
           </div>
@@ -115,7 +98,7 @@
           <img src="./img/bigBurger_min.png" alt="big burger">
         </div>
       </div>
-      <section id="section1" class="ingredients">
+      <section id="section1" class="hidden ingredients">
         <h2>Ingredients</h2>
         <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mollis id arcu vel maximus.</h3>
         <div class="swiper mySwiper">
@@ -169,12 +152,12 @@
           ultricies ac dapibus sed, dignissim interdum quam. Proin quis dignissim diam. Donec id magna placerat,
           fringilla odio et, efficitur lacus. Vivamus eu ultricies erat, eu lobortis nunc. Sed nec dignissim libero.
           Integer cursus leo nunc. Nulla mattis interdum nunc, sed semper turpis. Cras elit lorem, mollis ut feugiat ac,
-          ultricies eu dolor.</div>
-
+          ultricies eu dolor.
+        </div>
       </section>
 
 
-      <section id="section2" class="story ">
+      <section id="section2" class="hidden story ">
         <div class="story__wrp">
           <div class="story__wrp-text">
             <h2>The story</h2>
@@ -190,7 +173,7 @@
         </div>
       </section>
 
-      <section id="section3" class="burgers">
+      <section id="section3" class="hidden burgers">
         <h2>Burgers</h2>
         <div class="burgers__wrp">
           <div class="burgers__wrp-card">
@@ -235,7 +218,7 @@
         </div>
       </section>
 
-      <section id="section4" class="location">
+      <section id="section4" class="hidden location">
         <h2>Location</h2>
         <div class="location__text">
           <div>
@@ -244,22 +227,13 @@
           <div><a href="https://goo.gl/maps/Dk7TJgVeTNMUvNyaA">Pl. de la Riponne 10</a></div>
           <div><a href="https://goo.gl/maps/Dk7TJgVeTNMUvNyaA">1005 Lausanne</a></div>
           <div><a href="tel:0218000000">021 800 00 00</a></div>
-
-
-
-
         </div>
         <div id="map" class="location__map" >
-
         </div>
       </section>
 
-
-
     </div>
   </main>
-
-
 
 
   <footer>
@@ -278,13 +252,12 @@
   </footer>
 
   <script src="./js/preloader.js"></script>
-
+ 
+ 
   <script src="./js/script.js"></script>
   <script src="./js/burger_card.js"></script>
-
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
   <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper(".mySwiper", {
@@ -323,9 +296,7 @@
       }
     });
   </script>
-
   <script src="./js/location.js"></script>
-
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJKTjPjGVtv0JYYansLvbXK9aZ6BqT8yM&callback=initMap">
   </script>

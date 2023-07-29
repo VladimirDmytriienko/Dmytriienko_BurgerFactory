@@ -61,6 +61,19 @@ body.active-nav {
   position: fixed;
 }
 
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1.5s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
 h3 {
   font: normal normal bold 24px/35px Poppins;
   letter-spacing: 0px;
@@ -583,6 +596,9 @@ footer {
 }
 /* MOBILE */
 @media (max-width: 768.98px) {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
   .container {
     max-width: none;
   }
